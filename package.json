@@ -2,6 +2,8 @@
   "name": "medusa-roles-task",
   "version": "1.0.0",
   "private": true,
+  "author": "Elizabeth Onyemowo Agbo",
+  "email": "onyemowo.agbo10@gmail.com",
   "description": "Responsive Settings > User Roles task (React + Tailwind + shadcn) with a NestJS REST API.",
   "scripts": {
     "dev": "concurrently -n web,api -c blue,green \"npm --prefix frontend run dev\" \"npm --prefix backend run start:dev\"",
