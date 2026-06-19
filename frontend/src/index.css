@@ -1,0 +1,146 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Untitled UI design tokens.
+ * Raw palette is defined once here and mapped both to semantic
+ * shadcn variables and to Tailwind utilities via @theme inline.
+ */
+:root {
+  /* Brand / primary */
+  --uui-brand-50: #f9f5ff;
+  --uui-brand-200: #e9d7fe;
+  --uui-brand-300: #d6bbfb;
+  --uui-brand-600: #7f56d9;
+  --uui-brand-700: #6941c6;
+
+  /* Grays */
+  --uui-gray-25: #fcfcfd;
+  --uui-gray-50: #f9fafb;
+  --uui-gray-100: #f2f4f7;
+  --uui-gray-200: #eaecf0;
+  --uui-gray-300: #d0d5dd;
+  --uui-gray-500: #667085;
+  --uui-gray-600: #475467;
+  --uui-gray-700: #344054;
+  --uui-gray-900: #101828;
+
+  /* Feedback */
+  --uui-success-50: #ecfdf3;
+  --uui-success-500: #12b76a;
+  --uui-success-700: #027a48;
+  --uui-warning-50: #fffaeb;
+  --uui-warning-500: #f79009;
+  --uui-warning-700: #b54708;
+
+  /* Radii / shadow */
+  --radius: 0.625rem;
+  --uui-shadow-card:
+    0 1px 2px 0 rgb(16 24 40 / 0.06), 0 1px 3px 0 rgb(16 24 40 / 0.1);
+
+  /* shadcn semantic tokens mapped onto the palette */
+  --background: #ffffff;
+  --foreground: var(--uui-gray-900);
+  --card: #ffffff;
+  --card-foreground: var(--uui-gray-900);
+  --popover: #ffffff;
+  --popover-foreground: var(--uui-gray-900);
+  --primary: var(--uui-brand-600);
+  --primary-foreground: #ffffff;
+  --secondary: var(--uui-gray-50);
+  --secondary-foreground: var(--uui-gray-700);
+  --muted: var(--uui-gray-50);
+  --muted-foreground: var(--uui-gray-500);
+  --accent: var(--uui-brand-50);
+  --accent-foreground: var(--uui-brand-700);
+  --destructive: #d92d20;
+  --border: var(--uui-gray-200);
+  --input: var(--uui-gray-300);
+  --ring: var(--uui-brand-300);
+
+  --sidebar: #ffffff;
+  --sidebar-foreground: var(--uui-gray-700);
+  --sidebar-primary: var(--uui-brand-600);
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: var(--uui-gray-50);
+  --sidebar-accent-foreground: var(--uui-gray-900);
+  --sidebar-border: var(--uui-gray-200);
+  --sidebar-ring: var(--uui-brand-300);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  /* Direct brand + palette utilities (bg-brand, text-gray-700, etc.) */
+  --color-brand-50: var(--uui-brand-50);
+  --color-brand-200: var(--uui-brand-200);
+  --color-brand-300: var(--uui-brand-300);
+  --color-brand-600: var(--uui-brand-600);
+  --color-brand-700: var(--uui-brand-700);
+
+  --color-gray-25: var(--uui-gray-25);
+  --color-gray-50: var(--uui-gray-50);
+  --color-gray-100: var(--uui-gray-100);
+  --color-gray-200: var(--uui-gray-200);
+  --color-gray-300: var(--uui-gray-300);
+  --color-gray-500: var(--uui-gray-500);
+  --color-gray-600: var(--uui-gray-600);
+  --color-gray-700: var(--uui-gray-700);
+  --color-gray-900: var(--uui-gray-900);
+
+  --color-success-50: var(--uui-success-50);
+  --color-success-500: var(--uui-success-500);
+  --color-success-700: var(--uui-success-700);
+  --color-warning-50: var(--uui-warning-50);
+  --color-warning-500: var(--uui-warning-500);
+  --color-warning-700: var(--uui-warning-700);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  --font-sans:
+    'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-gray-50 text-foreground;
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
