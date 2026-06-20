@@ -1,8 +1,3 @@
-/**
- * Test fixtures matching the backend API response shapes.
- * Kept small but representative (covers all type/status variants).
- */
-
 export const userRolesFixture = [
   {
     id: 'role-superadmin',
