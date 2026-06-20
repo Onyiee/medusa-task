@@ -2,8 +2,8 @@
 
 A responsive **Settings → User Roles** demo page built as a small monorepo:
 
-- **`frontend/`** — Vite + React (JavaScript) + Tailwind CSS v4 + shadcn/ui
-- **`backend/`** — NestJS (JavaScript) REST API serving the roles data
+- **`frontend/`** -  Vite + React (JavaScript) + Tailwind CSS v4 + shadcn/ui
+- **`backend/`** - NestJS (JavaScript) REST API serving the roles data
 
 The frontend fetches user roles and active roles from the backend over REST and renders them responsively across mobile, tablet and desktop.
 
@@ -45,6 +45,7 @@ npm run dev
 
 ## Environment
 
-- Frontend `VITE_API_URL` — base URL of the API. Defaults to `/api` (proxied to the backend in dev).
+- Frontend `VITE_API_URL` -  base URL of the API. Defaults to `/api` (proxied to the backend in dev).
 
 ## Deployment
+- Deployed here - https://medusa-task-msrl.vercel.app/
